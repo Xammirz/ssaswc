@@ -53,8 +53,9 @@ class TournamentView(ListView):
 
 class TournamentDeleteView(DeleteView):
     model = Tournament
-    context_object_name = 'tournaments'
-    success_url = reverse_lazy('home')
+    template_name = "tournament_confirm_delete.html"
+    success_url = reverse_lazy("home")
+    
 
     
 
